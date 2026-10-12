@@ -11,7 +11,9 @@ import {
 } from "lucide-react";
 import "./App.css";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = import.meta.env.VITE_API_URL;
+
+fetch(`${API_URL}/api/products`);
 
 const EXAMPLES = [
   "A phone under $500 with a great camera",
